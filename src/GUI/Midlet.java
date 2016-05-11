@@ -27,7 +27,7 @@ public class Midlet extends MIDlet {
     public void startApp() {
         INSTANCE = this;
      //  disp.setCurrent(new Splash("Tunisia Mall"));
-        disp.setCurrent(new ChoixClientResponsable());
+        disp.setCurrent(new Authentification("Authentification"));
     }
     
     public void pauseApp() {
