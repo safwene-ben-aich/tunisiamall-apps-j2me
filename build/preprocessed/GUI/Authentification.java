@@ -1,0 +1,145 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package GUI;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+import javax.microedition.io.Connector;
+import javax.microedition.io.HttpConnection;
+import javax.microedition.lcdui.Alert;
+import javax.microedition.lcdui.AlertType;
+import javax.microedition.lcdui.Command;
+import javax.microedition.lcdui.CommandListener;
+import javax.microedition.lcdui.Displayable;
+import javax.microedition.lcdui.Form;
+import javax.microedition.lcdui.Item;
+import javax.microedition.lcdui.TextField;
+
+/**
+ *
+ * @author Safwene
+ */
+public class Authentification extends Form implements CommandListener,Runnable{
+
+    private Command commandExit;
+    private Command commandLogin;
+    private TextField textFieldUsername;
+    private TextField textFieldPassword;
+    
+    private HttpConnection hc;
+    private DataInputStream dis;
+    private StringBuffer sb ;
+    private String url="http://localhost/scripts_php/authentification.php?"; 
+    
+    private Alert alert;
+    
+    
+    
+    
+    public Authentification(String title) {
+        super("Authentification");
+        this.prepareFormAuthentification();
+        
+    }
+    
+    public void prepareFormAuthentification()
+    {   
+        this.commandExit = new Command("Exit", Command.EXIT, 0);
+        this.commandLogin = new Command("Login", Command.SCREEN, 0);
+        this.textFieldUsername = new TextField("Username ", null, 50 , TextField.ANY);
+        this.textFieldPassword = new TextField("Password", null, 50, TextField.PASSWORD);
+        
+        
+        this.append(this.textFieldUsername);
+        this.append(this.textFieldPassword);
+        
+        this.addCommand(this.commandExit);
+        this.addCommand(this.commandLogin);
+        
+        this.setCommandListener(this);
+    }
+    
+    
+    
+    public boolean verifChampsAuthentification()
+    {
+        if (this.textFieldUsername.getString().equals(""))
+            return false;
+        else if (this.textFieldPassword.getString().equals(""))
+            return false;
+        
+        return true;
+    }
+    
+    
+
+    public void commandAction(Command command, Displayable displayable) {
+   
+                if (command == this.commandExit){
+                    Midlet.INSTANCE.destroyApp(false);
+                    Midlet.INSTANCE.notifyDestroyed();
+                }
+                else if (command == this.commandLogin){
+                    if (!this.verifChampsAuthentification()){
+                        this.alert = new Alert("Alert Authentification");
+                        this.alert.setTitle("Veuillez renseigner Les champs");
+                        this.alert.setTimeout(1000);
+                        this.alert.setType(AlertType.ERROR);
+                        Midlet.INSTANCE.disp.setCurrent(this.alert);
+                           
+                    }
+                    else {
+                        Thread th = new Thread(this);
+                        th.start();
+                        // Verification du mot de passe & username avec la base de données
+                      }
+                }
+    
+    
+    }
+
+    public void run() {
+          
+    
+        try {
+            this.hc=(HttpConnection)Connector.open(this.url+"username="+this.textFieldUsername.getString()+""
+                    + "&password="+this.textFieldPassword.getString());
+            
+            System.out.println(this.url+"username="+this.textFieldUsername.getString()+""
+                    + "&password="+this.textFieldPassword.getString());
+            this.dis=this.hc.openDataInputStream();
+            int ascii;
+            this.sb =new StringBuffer();
+            while( (ascii=this.dis.read()) != -1 ){
+                this.sb.append((char)ascii);
+            }
+            if (sb.toString().equals("true")){
+                        this.alert = new Alert("Alert Authentification");
+                        this.alert.setTitle("Bienvenu");
+                        this.alert.setTimeout(1000);
+                        this.alert.setType(AlertType.INFO);
+                        Midlet.INSTANCE.disp.setCurrent(this.alert);
+            }
+            else{
+                this.alert = new Alert("Alert Authentification");
+                        this.alert.setTitle("NON ! ");
+                        this.alert.setTimeout(1000);
+                        this.alert.setType(AlertType.INFO);
+                        Midlet.INSTANCE.disp.setCurrent(this.alert);
+            }
+            
+            
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    
+    
+    
+    
+    
+    }
+    }
+
