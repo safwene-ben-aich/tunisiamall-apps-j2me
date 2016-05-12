@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 12 Mai 2016 à 05:18
+-- Généré le :  Mer 11 Mai 2016 à 17:17
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -375,31 +375,31 @@ CREATE TABLE IF NOT EXISTS `produit` (
 --
 
 INSERT INTO `produit` (`ID`, `REFERENCE`, `ID_MARQUE`, `NOM`, `TYPE`, `PRIX`, `TAUX_REDUCTION`, `NOMBRE_POINT`, `PHOTO`, `DESCRIPTION`, `QUANTITE`, `QUANTITE_VENDU`, `Taille`) VALUES
-(16, 'REF321222', 11, 'sweat imprimé boudeuse gris chiné', 'Femme sweat-shirts', 211, 2, 2, 'img/3.jpg', '', 23, 21, 's'),
-(17, 'REF321091', 11, 'foulard imprimé cachemire écru et bleu marine', 'Femme accessoires', 211, 2, 2, 'img/5.jpg', '', 23, 20, 's'),
-(18, 'REF3287', 11, 'bottines à franges camel', 'Femme chaussures bottines', 211, 2, 2, 'img/6.jpg', '', 23, 21, 's'),
-(19, 'REF31', 11, 'escarpins suédine noirs', 'Femme chaussures escarpins', 211, 2, 2, 'img/9.jpg', '', 23, 20, 's'),
-(20, 'ref14424', 10, 'za', 'Femme jeans', 21, 1, 2, 'img/2.jpg', '', 2, 1, 'S'),
-(59, 'REF1223', 10, 'Blouson noir fermeture a pression', 'Femme vestes', 120, 10, 9, 'img/1.jpg', '', 29, 22, 's'),
-(60, 'REF2234', 11, 'baskets', 'Femme chaussures baskets', 50, 20, 3, 'img/2.jpg', '', 33, 5, 'm'),
-(61, 'REF2213', 10, 'jegging en jean brut', 'Femme jeans', 50, 60, 3, 'img/4.jpg', '', 35, 2, 'l'),
-(62, 'REF2235', 12, 'sweat imprimé boudeuse gris chiné', 'Femme sweat-shirts', 30, 5, 3, 'img/3.jpg', '', 65, 8, 'm'),
-(63, 'REF3343', 11, 'jegging en jean medium blue', 'Femme pantalons', 60, 10, 3, 'img/2.jpg', '', 98, 5, 'l'),
-(64, 'REF2323', 11, 'foulard imprimé cachemire écru et bleu marine', 'Femme pantalons', 10, 9, 2, 'img/5.jpg', '', 437, 21, 's'),
-(65, 'REF3244', 10, 'bottines à franges camel', 'Femme chaussures bottines', 99, 30, 3, 'img/6.jpg', '', 43, 34, 'S'),
-(66, 'REF2366', 12, 'escarpins suédine noirs', 'Femme chaussures escarpins', 100, 0, 10, 'img/9.jpg', '', 43, 21, 's'),
-(67, 'REF323234', 10, 'baskets', 'Femme combinaisons', 29, 10, 2, 'img/1.jpg', '', 324, 21, 'L'),
-(68, 'REF677', 12, 'JKJKJ', 'Homme jeans', 120, 0, 3, 'img/2.jpg', '', 22, 22, 'm'),
-(69, 'REF37782', 12, 'TEE-SHIRT COTON IMPRIMÉ', 'Enfant t-shirts', 45, 9, 9, 'img/1.jpg', '', 55, 21, 'S'),
-(70, 'REF7832', 12, 'JEAN SLIM EFFET NEIGE', 'Enfant jeans', 60, 3, 3, 'img/10.jpg', '', 67, 5, 'l'),
-(71, 'REF22134', 11, 'ROBE SALOPETTE EN DENIM', 'Enfant robes', 32, 3, 3, 'img/11.jpg', '', 120, 2, 'M'),
-(72, 'REF324', 10, 'PANTALON REGULAR TOUCHER DOUX ', 'Homme pantalons', 123, 2, 2, 'img/12.jpg', '', 45, 28, 'S'),
-(73, 'REF343', 10, 'Yves Saint Laurent', 'Femme accessoires', 200, 0, 0, 'img/15.jpg', '', 10, 4, '200'),
-(74, 'REF3232345', 10, 'Ciaté', 'Femme accessoires', 23, 0, 0, 'img/16.jpg', '', 234, 2, 's'),
-(75, 'REF356', 11, 'PARKA MI-SAISON STYLE COUPE-VENT', 'Femme manteau', 245, 2, 1, 'img/18.jpg', '', 25, 3, 'm'),
-(76, 'REF5665', 11, 'SAHARIENNE FLUIDE EFFET PEAU DE PÊCHE', 'Femme vestes', 456, 3, 0, 'img/19.jpg', '', 356, 23, 'm'),
-(77, 'REF435', 11, 'I LOVE SHOES Kizup', 'Femme chaussures escarpins', 298, 2, 2, 'img/20.jpg', '', 324, 32, 'S'),
-(78, 'EAN-8:61940024', 10, 'MARS - LEGERE', 'TABAC', 2.7, 20, 15, 'D:\\PI-DEV\\PI-DEV_safwene\\src\\edu\\esprit\\tunisiamall\\images\\mars_inter_legere.jpg', '', 3000, 0, NULL);
+(16, 'REF321222', 11, 'sweat imprimé boudeuse gris chiné', 'Femme sweat-shirts', 211, 2, 2, 'img/3.jpg', 'Sweat femme, gris chiné, imprimé boudeuse, loose, col rond, manches 3/4.matière : polyester 33 %,', 23, 21, 's'),
+(17, 'REF321091', 11, 'foulard imprimé cachemire écru et bleu marine', 'Femme accessoires', 211, 2, 2, 'img/5.jpg', 'foulard imprimé cachemire écru et bleu marine', 23, 20, 's'),
+(18, 'REF3287', 11, 'bottines à franges camel', 'Femme chaussures bottines', 211, 2, 2, 'img/6.jpg', 'Bottines à talons femme, camel, suédine, franges œillets doré, fermeture zip, talons 7 cm.matière ', 23, 21, 's'),
+(19, 'REF31', 11, 'escarpins suédine noirs', 'Femme chaussures escarpins', 211, 2, 2, 'img/9.jpg', 'Bottines à talons femme, camel, suédine, franges œillets doré, fermeture zip, talons 7 cm.matière ', 23, 20, 's'),
+(20, 'ref14424', 10, 'za', 'Femme jeans', 21, 1, 2, 'img/2.jpg', 'd,,fefreroitr', 2, 1, 'S'),
+(59, 'REF1223', 10, 'Blouson noir fermeture a pression', 'Femme vestes', 120, 10, 9, 'img/1.jpg', 'DESCRIPTION : refdekfdnfdkj', 29, 22, 's'),
+(60, 'REF2234', 11, 'baskets', 'Femme chaussures baskets', 50, 20, 3, 'img/2.jpg', 'DSDSF', 33, 5, 'm'),
+(61, 'REF2213', 10, 'jegging en jean brut', 'Femme jeans', 50, 60, 3, 'img/4.jpg', 'Jegging en jean femme basic, brut, 2 fausses poches avant, 2 poches dos, fermeture zippée boutonnée.', 35, 2, 'l'),
+(62, 'REF2235', 12, 'sweat imprimé boudeuse gris chiné', 'Femme sweat-shirts', 30, 5, 3, 'img/3.jpg', 'Sweat femme, gris chiné, imprimé boudeuse, loose, col rond, manches 3/4.\r\nmatière : polyester 33 %, ', 65, 8, 'm'),
+(63, 'REF3343', 11, 'jegging en jean medium blue', 'Femme pantalons', 60, 10, 3, 'img/2.jpg', 'Jegging en jean femme basic, medium blue, 2 fausses poches avant, 2 poches dos, fermeture zippée bou', 98, 5, 'l'),
+(64, 'REF2323', 11, 'foulard imprimé cachemire écru et bleu marine', 'Femme pantalons', 10, 9, 2, 'img/5.jpg', 'Foulard femme, écru, imprimé cachemire et arabesque, bleu marine et rose, finitions petits pompons.\r', 437, 21, 's'),
+(65, 'REF3244', 10, 'bottines à franges camel', 'Femme chaussures bottines', 99, 30, 3, 'img/6.jpg', 'Bottines à talons femme, camel, suédine, franges œillets doré, fermeture zip, talons 7 cm.\r\nmatière ', 43, 34, 'S'),
+(66, 'REF2366', 12, 'escarpins suédine noirs', 'Femme chaussures escarpins', 100, 0, 10, 'img/9.jpg', 'Chaussures escarpins femme, noir, effet suédine, talons 10 cm.\r\nmatière : textile 100 %', 43, 21, 's'),
+(67, 'REF323234', 10, 'baskets', 'Femme combinaisons', 29, 10, 2, 'img/1.jpg', 'EJK FJEKFE FDJEKL', 324, 21, 'L'),
+(68, 'REF677', 12, 'JKJKJ', 'Homme jeans', 120, 0, 3, 'img/2.jpg', 'JKLJLKJ JOJ', 22, 22, 'm'),
+(69, 'REF37782', 12, 'TEE-SHIRT COTON IMPRIMÉ', 'Enfant t-shirts', 45, 9, 9, 'img/1.jpg', 'vetements pour enfants', 55, 21, 'S'),
+(70, 'REF7832', 12, 'JEAN SLIM EFFET NEIGE', 'Enfant jeans', 60, 3, 3, 'img/10.jpg', 'Le jean slim des petites modeuses ! \r\n- Jean slim / coupe ajustée ', 67, 5, 'l'),
+(71, 'REF22134', 11, 'ROBE SALOPETTE EN DENIM', 'Enfant robes', 32, 3, 3, 'img/11.jpg', 'Ouverture boucle métallique sur bretelles', 120, 2, 'M'),
+(72, 'REF324', 10, 'PANTALON REGULAR TOUCHER DOUX ', 'Homme pantalons', 123, 2, 2, 'img/12.jpg', 'Pantalon 5 poches ', 45, 28, 'S'),
+(73, 'REF343', 10, 'Yves Saint Laurent', 'Femme accessoires', 200, 0, 0, 'img/15.jpg', 'Black Opium, le nouveau parfum féminin par Yves Saint Laurent. Une dose d''adrénaline, pour une héroï', 10, 4, '200'),
+(74, 'REF3232345', 10, 'Ciaté', 'Femme accessoires', 23, 0, 0, 'img/16.jpg', 'Ce masque de nuit pour les ongles est une petite merveille et va révolutionner votre routine de beau', 234, 2, 's'),
+(75, 'REF356', 11, 'PARKA MI-SAISON STYLE COUPE-VENT', 'Femme manteau', 245, 2, 1, 'img/18.jpg', '- Parka mi-saison', 25, 3, 'm'),
+(76, 'REF5665', 11, 'SAHARIENNE FLUIDE EFFET PEAU DE PÊCHE', 'Femme vestes', 456, 3, 0, 'img/19.jpg', 'Veste style saharienne ', 356, 23, 'm'),
+(77, 'REF435', 11, 'I LOVE SHOES Kizup', 'Femme chaussures escarpins', 298, 2, 2, 'img/20.jpg', 'DSDS', 324, 32, 'S'),
+(78, 'EAN-8:61940024', 10, 'MARS - LEGERE', 'TABAC', 2.7, 20, 15, 'D:\\PI-DEV\\PI-DEV_safwene\\src\\edu\\esprit\\tunisiamall\\images\\mars_inter_legere.jpg', 'DOKHAN', 3000, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -515,7 +515,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   UNIQUE KEY `UNIQ_8D93D64992FC23A8` (`username_canonical`),
   UNIQUE KEY `UNIQ_8D93D649A0D96FBF` (`email_canonical`),
   UNIQUE KEY `CIN` (`CIN`,`TELEPHONE`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=117 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=59 ;
 
 --
 -- Contenu de la table `user`
@@ -546,18 +546,7 @@ INSERT INTO `user` (`ID`, `CIN`, `NOM`, `PRENOM`, `SEXE`, `password`, `QRCODE`, 
 (54, 'fqslkjfsqlkjfljl', 'llkjlkj', 'lkjlj', 'HOMME', 'lj', 'klj', 'lkj', 'lkj', 'jl', 'RESPONSABLE', 2, 'lj', 'ljcanonical', 'lj', 'ljcanonincal', 1, 'BFF8060918939E1B21E5796CC617A827', NULL, 0, 0, NULL, NULL, NULL, '0', 0, NULL, NULL, NULL, NULL, NULL),
 (55, 'flqksflkjfslkjqflkj', 'lkjljk', 'lkj', 'HOMME', 'a41f14b87d958d0cd26951a10e88b2eda8acbaaa12a730dea25ac39e8612de5ea64bd7a1e03693a8a3bf0c35cd1adcf0553cadca8d5c10e9e359729e78d705f1', 'kjlj', 'lkj', 'lj', 'lkj', 'RESPONSABLE', 2, 'jlj', 'jljcanonical', 'kfs', 'kfscanonincal', 1, '52A65DD3663C43570A0ADA82816B5E62', NULL, 0, 0, NULL, NULL, NULL, '0', 0, NULL, NULL, NULL, NULL, NULL),
 (56, 'lfk)lkfsqjlksfjlk', 'jlkjljlj', 'kjljlj', 'HOMME', '', 'jlkjfsqlkj', 'lkjljlj', 'ljlkjljkl', 'lkjl', 'RESPONSABLE', 2, 'lkjlkjl', 'lkjlkjlcanonical', 'kljlqskjflkqjf', 'kljlqskjflkqjfcanonincal', 1, '90CAAE0B3501A71B870160F379D9C257', NULL, 0, 0, NULL, NULL, NULL, '0', 0, NULL, NULL, NULL, NULL, NULL),
-(58, '1134654', 'jlkjsqflkqkj', 'jlkjlkjlkj', 'HOMME', '94a1f51af54bad9fac84a784a051d2717c709bd3bfa24faddc2e81eebaa1bfb2f68124b1a66b1f542c44d7f56bcc9de5ef2cdb54db830408267c6981febffef7', 'klsjflkqsfj', 'jlkjlkjlkj', 'jkljljl', 'flsqkjflkjk', 'RESPONSABLE', 1, 'lksfqlkjflkj', 'lksfqlkjflkjcanonical', 'fatma.jaafar@esprit.tn', 'fatma.jaafar@esprit.tncanonincal', 1, 'C8E61C386ECBE0101DAFCF7B82BBDA01', NULL, 0, 0, NULL, NULL, NULL, '0', 0, NULL, NULL, NULL, NULL, NULL),
-(64, '113790025', 'Ben Aich', 'Safwene', 'Homme', '4815162342951', 'http://www.esprit.tn', '0021692657478', '', 'Tunis, Esprit', 'CLIENT', 1, 'Snizedsqr', 'Snizedsqrcanonical', 'safwene.benaizch@esprit.tn', 'safwene.benaizch@esprit.tn', 1, 'salt', '0000-00-00 00:00:00', 1, 0, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '0', 0, '0000-00-00 00:00:00', '', '', '', ''),
-(66, '11325654', 'Ben Said', 'Ahmed', 'Homme', '12321545', 'http://www.facebook.tn', '0021696183591', '', 'Tunis, Esprit', 'CLIENT', 1, 'ziiiw', 'ziiiwcanonical', 'safwene.ziiiw@esprit.tn', 'safwene.ziiiw@esprit.tn', 1, 'salt', '0000-00-00 00:00:00', 1, 0, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '0', 0, '0000-00-00 00:00:00', '', '', '', ''),
-(70, '113225654', 'Ben Said', 'Ahmed', 'Homme', '12321545', 'http://www.facebook.tn', '0021696183591', '', 'Tunis, Esprit', 'CLIENT', 1, 'ziw', 'ziwcanonical', 'safwene.zisfiiw@esprit.tn', 'safwene.zisfiiw@esprit.tn', 1, 'salt', '0000-00-00 00:00:00', 1, 0, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '0', 0, '0000-00-00 00:00:00', '', '', '', ''),
-(91, '113256154', 'Ben Said', 'Ahmed', 'Homme', '12321545', 'http://www.facebook.tn', '0021696183591', '', 'Tunis, Esprit', 'CLIENT', 1, 'zisiiw', 'zisiiwcanonical', 'safwene.zisiiw@esprit.tn', 'safwene.zisiiw@esprit.tn', 1, 'salt', '0000-00-00 00:00:00', 1, 0, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '0', 0, '0000-00-00 00:00:00', '', '', '', ''),
-(97, '116154', 'Ben Said', 'Ahmed', 'Homme', '12321545', 'http://www.facebook.tn', '0021696183591', '', 'Tunis, Esprit', 'CLIENT', 1, 'zisdsqiiw', 'zisdsqiiwcanonical', 'safwene.zisqsiiw@esprit.tn', 'safwene.zisqsiiw@esprit.tn', 1, 'salt', '0000-00-00 00:00:00', 1, 0, '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', '0', 0, '0000-00-00 00:00:00', '', '', '', ''),
-(103, '1161544', 'Ben Said', 'Ahmed', 'Homme', '12321545', 'http://www.facebook.tn', '0021696183591', '', 'Tunis, Esprit', 'CLIENT', 1, 'zisdsqdsiiw', 'zisdsqdsiiwcanonical', 'safwene.zisqdssiiw@esprit.tn', 'safwene.zisqdssiiw@esprit.tncanonical', 1, 'SALT', NULL, 0, 0, NULL, NULL, NULL, '0', 0, NULL, NULL, NULL, NULL, NULL),
-(107, '11622154', 'Ben Said', 'Ahmed', 'Homme', '12321545', 'http://www.facebook.tn', '0021696183591', '', 'Tunis, Esprit', 'CLIENT', 1, 'zisdsdsqqdsiiw', 'zisdsdsqqdsiiwcanonical', 'safwene.zisdsqqfssiiw@esprit.tn', 'safwene.zisdsqqfssiiw@esprit.tncanonical', 1, '83955c75de10cfd6244a719e3163e1ff', NULL, 0, 0, NULL, NULL, NULL, '0', 0, NULL, NULL, NULL, NULL, NULL),
-(108, '116223154', 'Ben Said', 'sami', 'Homme', '5c5dbde2f2004436cdc365bbf09a8b56c823ede8ec154fea79df806d70300f4d0b4f2d1b8ad63dde178811b4672161955c0f5d9fd6b38fdf56b90635b53c79bd', 'http://www.facebook.tn', '0021696183591', '', 'Tunis, Esprit', 'CLIENT', 1, 'zisfsqfiiw', 'zisfsqfiiwcanonical', 'safwene.zisfsfssiiw@esprit.tn', 'safwene.zisfsfssiiw@esprit.tncanonical', 1, '58bfe0e946c9dff5c41545c9b2bc322d', NULL, 0, 0, NULL, NULL, NULL, '0', 0, NULL, NULL, NULL, NULL, NULL),
-(114, '2221', 'dsq', 'dsq', 'Homme', '8299f48247d60cc269ad9d22ce614cb24ffe66ec5bfcda7ea1f54861508b05118f756315cde51f3b6660b2f3cc1ed38f210b5b3f234563845c323cce33fb0a70', 'dsq', '121', '', 'fsqfq', 'CLIENT', 1, 'dsq', 'dsqcanonical', 'fsqf', 'fsqfcanonical', 1, 'a2f3f2b8e3999e7d957754f2f337bcfe', NULL, 0, 0, NULL, NULL, NULL, '0', 0, NULL, NULL, NULL, NULL, NULL),
-(115, '22514125', 'Antar', 'Ahmed', 'Homme', 'a16fd75163febcd10af9d30a6cae4c6e2fe6794bfe35b3cd979eadbd8afedaae2642b379c1bf9fe799cd35730d6c9e7d7e489617d93105fe0a7406a4040429bf', 'http://www.esprit.tn', '0021692658547', '', 'Bizerte,Tunis', 'CLIENT', 1, 'antour', 'antourcanonical', 'ahmed.antar@esprit.tn', 'ahmed.antar@esprit.tncanonical', 1, '542ab839aa936b1b1650c012917404e7', NULL, 0, 0, NULL, NULL, NULL, '0', 0, NULL, NULL, NULL, NULL, NULL),
-(116, '25515452', 'Jafaar', 'Fatma', 'Femme', '0559df4a48de216b371ff6f77549b613ea6b267dc9841a3d1e0adf0dcb755a83e26a40072b3943a2f999afb613c58454b9d8c77c1249b20506532358ee7933d4', 'http://www.esprit.tn', '002165547874', '', 'tunis,esprit', 'CLIENT', 1, 'fatouma', 'fatoumacanonical', 'fatma.jaafar@esprit.tn', 'fatma.jaafar@esprit.tncanonical', 1, '1b131b17415a780327d864c8b7f1cc75', NULL, 0, 0, NULL, NULL, NULL, '0', 0, NULL, NULL, NULL, NULL, NULL);
+(58, '1134654', 'jlkjsqflkqkj', 'jlkjlkjlkj', 'HOMME', '94a1f51af54bad9fac84a784a051d2717c709bd3bfa24faddc2e81eebaa1bfb2f68124b1a66b1f542c44d7f56bcc9de5ef2cdb54db830408267c6981febffef7', 'klsjflkqsfj', 'jlkjlkjlkj', 'jkljljl', 'flsqkjflkjk', 'RESPONSABLE', 1, 'lksfqlkjflkj', 'lksfqlkjflkjcanonical', 'fatma.jaafar@esprit.tn', 'fatma.jaafar@esprit.tncanonincal', 1, 'C8E61C386ECBE0101DAFCF7B82BBDA01', NULL, 0, 0, NULL, NULL, NULL, '0', 0, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 

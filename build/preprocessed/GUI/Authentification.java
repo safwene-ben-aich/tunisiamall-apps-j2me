@@ -124,12 +124,9 @@ public class Authentification extends Form implements CommandListener,Runnable{
                 this.sb.append((char)ascii);
             }
             if (!sb.toString().equals("false")){
-                
-                        this.alert = new Alert("Alert Authentification");
-                        this.alert.setTitle(sb.toString());
-                        this.alert.setTimeout(1000);
-                        this.alert.setType(AlertType.INFO);
-                        Midlet.INSTANCE.disp.setCurrent(this.alert);
+                     if (sb.toString().equals("RESPONSABLE")){
+                            Midlet.INSTANCE.disp.setCurrent(new ChoixFormSafwene());
+                        }
             }
             else{
                 this.alert = new Alert("Alert Authentification");
