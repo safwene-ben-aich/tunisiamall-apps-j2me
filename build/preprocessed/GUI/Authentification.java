@@ -26,6 +26,7 @@ public class Authentification extends Form implements CommandListener,Runnable{
 
     private Command commandExit;
     private Command commandLogin;
+    private Command commandInscription;
     private TextField textFieldUsername;
     private TextField textFieldPassword;
     
@@ -49,8 +50,11 @@ public class Authentification extends Form implements CommandListener,Runnable{
     {   
         this.commandExit = new Command("Exit", Command.EXIT, 0);
         this.commandLogin = new Command("Login", Command.SCREEN, 0);
+        this.commandInscription = new Command("Inscription", Command.SCREEN, 1);
         this.textFieldUsername = new TextField("Username ", null, 50 , TextField.ANY);
         this.textFieldPassword = new TextField("Password", null, 50, TextField.PASSWORD);
+        
+        
         
         
         this.append(this.textFieldUsername);
@@ -58,6 +62,7 @@ public class Authentification extends Form implements CommandListener,Runnable{
         
         this.addCommand(this.commandExit);
         this.addCommand(this.commandLogin);
+        this.addCommand(this.commandInscription);
         
         this.setCommandListener(this);
     }
@@ -94,8 +99,10 @@ public class Authentification extends Form implements CommandListener,Runnable{
                     else {
                         Thread th = new Thread(this);
                         th.start();
-                        // Verification du mot de passe & username avec la base de données
                       }
+                }
+                else if (command == this.commandInscription){
+                      Midlet.INSTANCE.disp.setCurrent(new InscriptionClient("Inscription Client"));
                 }
     
     
@@ -116,9 +123,10 @@ public class Authentification extends Form implements CommandListener,Runnable{
             while( (ascii=this.dis.read()) != -1 ){
                 this.sb.append((char)ascii);
             }
-            if (sb.toString().equals("true")){
+            if (!sb.toString().equals("false")){
+                
                         this.alert = new Alert("Alert Authentification");
-                        this.alert.setTitle("Bienvenu");
+                        this.alert.setTitle(sb.toString());
                         this.alert.setTimeout(1000);
                         this.alert.setType(AlertType.INFO);
                         Midlet.INSTANCE.disp.setCurrent(this.alert);
