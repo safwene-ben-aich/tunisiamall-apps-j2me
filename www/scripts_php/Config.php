@@ -6,7 +6,7 @@ Class Config{
 		$serverName = 'localhost';
 		$userName = 'root';
 		$password ='';
-		$dbName ='tunisiamallbd';
+		$dbName ='tunisiamallbdf';
 		
 		
 		try {

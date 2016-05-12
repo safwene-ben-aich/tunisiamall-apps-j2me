@@ -25,8 +25,8 @@ class GestionProduits {
         $mydata->addChild('TAUX_REDUCTION',$row['TAUX_REDUCTION']);
         $mydata->addChild('NOMBRE_POINT',$row['NOMBRE_POINT']);
         $mydata->addChild('PHOTO',$row['PHOTO']);
-        $mydata->addChild('DESCRIPTION',$row['DESCRIPTION']);
-        $mydata->addChild('QUANTITE',$row['QUANTITE']);
+		$mydata->addChild('DESCRIPTION',$row['DESCRIPTION']);
+		$mydata->addChild('QUANTITE',$row['QUANTITE']);
         $mydata->addChild('QUANTITE_VENDU',$row['QUANTITE_VENDU']);
         }
 } else {
