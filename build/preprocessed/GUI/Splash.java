@@ -53,7 +53,7 @@ ImageItem ii;
         Midlet.INSTANCE.notifyDestroyed();
         }
         else if (c==cmdnext){
-       // Midlet.INSTANCE.disp.setCurrent(new inscriptionclient("Tunisia Mall"));
+        Midlet.INSTANCE.disp.setCurrent(new InscriptionClient("Tunisia Mall"));
         }
     }
 
