@@ -129,7 +129,6 @@ public class Authentification extends Form implements CommandListener,Runnable{
                      if (sb.toString().equals("RESPONSABLE")){
                             Midlet.INSTANCE.disp.setCurrent(new ChoixFormSafwene());
                         }
-<<<<<<< HEAD
                      else if (sb.toString().equals("CLIENT")){
                      
                         Client client= new Client();
@@ -138,8 +137,6 @@ public class Authentification extends Form implements CommandListener,Runnable{
                      }
                      
                      
-=======
->>>>>>> master
             }
             else{
                 this.alert = new Alert("Alert Authentification");
