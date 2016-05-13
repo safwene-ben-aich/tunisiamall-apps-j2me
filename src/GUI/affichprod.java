@@ -6,12 +6,15 @@
 package GUI;
 
 import DAO.ClientDAO;
-import DAO.CommentaireDAO;
+import DAO.CommentDAO;
+
 import DAO.MarqueDAO;
 import DAO.PanierDAO;
 import DAO.ProduitDAO;
+import DAO.ThreadDAO;
 import Entities.Client;
-import Entities.Commentaire;
+import Entities.Comment;
+import Entities.Thread;
 import Entities.Marque;
 import Entities.Panier;
 import Entities.Produit;
@@ -112,13 +115,18 @@ System.out.println("Button was clicked");
     Client[] cli= new ClientDAO().select(client);
       
     System.out.println("theeeee cliennnnnnt"+cli[0]);
-    Produit p=new Produit();
+    Thread p=new Thread();
     p.setId(leproduit.getId());
-    Commentaire commentaire= new Commentaire(cli[0], p, com.getString());
+    Comment comment= new Comment(cli[0], p, com.getString());
+    
 
-
-    System.out.println(commentaire);
-boolean a=new CommentaireDAO().insert(commentaire);
+    System.out.println(comment);
+    
+    ThreadDAO threaddao= new ThreadDAO();
+    if ((threaddao.select(p.getId())))
+    {
+    threaddao.add(leproduit.getId());
+    boolean a=new CommentDAO().insert(comment);
 if (a==true){
 Midlet.INSTANCE.disp.setCurrent(alertsuccess, new affichprod("Produit", produit0, client,idmarque));
 
@@ -127,6 +135,30 @@ else {
 Midlet.INSTANCE.disp.setCurrent(alertechec, new ListProduits(client,idmarque));
 
 }
+threaddao.update(leproduit.getId());
+    }
+    
+    else if (!(threaddao.select(p.getId()))){
+    
+       threaddao.update(leproduit.getId());
+    boolean a=new CommentDAO().insert(comment);
+if (a==true){
+Midlet.INSTANCE.disp.setCurrent(alertsuccess, new affichprod("Produit", produit0, client,idmarque));
+
+}
+else {
+Midlet.INSTANCE.disp.setCurrent(alertechec, new ListProduits(client,idmarque));
+
+}
+    
+    
+   
+    
+    }
+    
+    
+    
+
 }
 });
 append(buttonajoutcom);
@@ -151,15 +183,15 @@ System.out.println("Button was clicked");
 Panier panier= new Panier(cli[0],p,1);
 
     System.out.println(panier);
-boolean a=new PanierDAO().insert(panier);
-if (a==true){
-Midlet.INSTANCE.disp.setCurrent(alertsuccess, new affichprod("Produit", produit0, client, idmarque));
+            boolean a=new PanierDAO().insert(panier);
+            if (a==true){
+            Midlet.INSTANCE.disp.setCurrent(alertsuccess, new affichprod("Produit", produit0, client, idmarque));
 
-}
-else {
-Midlet.INSTANCE.disp.setCurrent(alertechec, new ListProduits(client,idmarque));
+            }
+            else {
+            Midlet.INSTANCE.disp.setCurrent(alertechec, new ListProduits(client,idmarque));
 
-}
+            }
 }
 });
 append(button);
@@ -182,10 +214,10 @@ System.out.println("Button was clicked");
     Produit p=new Produit();
     p.setId(leproduit.getId());
 
-    Commentaire[] commentaires = new CommentaireDAO().select(p);
-        if (commentaires.length > 0) {
-            for (int i = 0; i < commentaires.length; i++) {
-                append(new StringItem(commentaires[i].getClient().getLogin(), commentaires[i].getDescription()));
+    Comment[] comments = new CommentDAO().select(p);
+        if (comments.length > 0) {
+            for (int i = 0; i < comments.length; i++) {
+                append(new StringItem(comments[i].getAuthor().getLogin(), comments[i].getBody()));
             }
         }
 }
@@ -202,17 +234,6 @@ append(buttoncom);
 
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     public void commandAction(Command c, Displayable d) {
         Midlet.INSTANCE.disp.setCurrent(new ListProduits(client,idmarque));
         if (c==cmdggmap){

@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import Entities.Client;
 import java.io.DataInputStream;
 import java.io.IOException;
 import javax.microedition.io.Connector;
@@ -103,6 +104,7 @@ public class Authentification extends Form implements CommandListener,Runnable{
                 }
                 else if (command == this.commandInscription){
                       Midlet.INSTANCE.disp.setCurrent(new InscriptionClient("Inscription Client"));
+                 
                 }
     
     
@@ -124,12 +126,17 @@ public class Authentification extends Form implements CommandListener,Runnable{
                 this.sb.append((char)ascii);
             }
             if (!sb.toString().equals("false")){
-                
-                        this.alert = new Alert("Alert Authentification");
-                        this.alert.setTitle(sb.toString());
-                        this.alert.setTimeout(1000);
-                        this.alert.setType(AlertType.INFO);
-                        Midlet.INSTANCE.disp.setCurrent(this.alert);
+                     if (sb.toString().equals("RESPONSABLE")){
+                            Midlet.INSTANCE.disp.setCurrent(new ChoixFormSafwene());
+                        }
+                     else if (sb.toString().equals("CLIENT")){
+                     
+                        Client client= new Client();
+                    client.setLogin(textFieldUsername.getString());
+                    Midlet.INSTANCE.disp.setCurrent( new ListMarques(client));
+                     }
+                     
+                     
             }
             else{
                 this.alert = new Alert("Alert Authentification");

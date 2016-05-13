@@ -38,8 +38,8 @@ public class ClientHandler extends DefaultHandler {
             seclectedClient = new Client();
         } else if (qName.equals("ID")) {
             selectedBalise = "ID";
-        } else if (qName.equals("LOGIN")) {
-            selectedBalise = "LOGIN";
+        } else if (qName.equals("username")) {
+            selectedBalise = "username";
         } 
     }
 
@@ -50,7 +50,7 @@ public class ClientHandler extends DefaultHandler {
             seclectedClient = null;
         } else if (qName.equals("ID")) {
             selectedBalise = "";
-        } else if (qName.equals("LOGIN")) {
+        } else if (qName.equals("username")) {
             selectedBalise = "";
         } 
     }
@@ -61,7 +61,7 @@ public class ClientHandler extends DefaultHandler {
                 seclectedClient.setId(Integer.parseInt(new String(chars, i, i1)));
                 System.out.println(new String(chars, i, i1));
             }
-            if (selectedBalise.equals("LOGIN")) {
+            if (selectedBalise.equals("username")) {
                 seclectedClient.setLogin(new String(chars, i, i1));
                 System.out.println(new String(chars, i, i1));
             }
