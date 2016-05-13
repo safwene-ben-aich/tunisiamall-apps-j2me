@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import Entities.Client;
 import java.io.DataInputStream;
 import java.io.IOException;
 import javax.microedition.io.Connector;
@@ -176,11 +177,33 @@ public class InscriptionClient extends Form implements CommandListener,Runnable{
                 this.sb.append((char)ascii);
             }
             if (!sb.toString().equals("false")){
-                this.alert = new Alert("Inscription validé");
-                this.alert.setTitle("Inscription validé");
-                this.alert.setTimeout(1000);
-                this.alert.setType(AlertType.INFO);
-                Midlet.INSTANCE.disp.setCurrent(this.alert);
+                
+                
+                
+                Client client= new Client();
+client.setAdresse(textFieldAdresse.getString());
+client.setEmail(textFieldEmail.getString());
+client.setLogin(textFieldUsername.getString());
+client.setNom(textFieldNom.getString());
+client.setPrenom(textFieldPrenom.getString());
+
+client.setSexe(choiceGroupSexe.getString(choiceGroupSexe.getSelectedIndex()));
+    System.out.println("clientttttttttttt"+client);
+                
+                
+                
+                
+//                this.alert = new Alert("Inscription validé");
+//                this.alert.setTitle("Inscription validé");
+//                this.alert.setTimeout(1000);
+//                this.alert.setType(AlertType.INFO);
+//                
+//                Midlet.INSTANCE.disp.setCurrent(this.alert);
+                      Alert alertsuccess=new Alert("Inscription", "Inscription éfféctuée avec succée", null, AlertType.CONFIRMATION);
+                
+                
+                Midlet.INSTANCE.disp.setCurrent(alertsuccess, new ListMarques(client));
+
             }
             else {
                   this.alert = new Alert("Inscription non validé");

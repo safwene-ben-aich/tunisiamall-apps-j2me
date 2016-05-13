@@ -44,9 +44,9 @@ public class MarqueHandler extends DefaultHandler {
         } else if (qName.equals("ID_RESPONSABLE")) {
             selectedBalise = "ID_RESPONSABLE";
         }
-        else if (qName.equals("image_marque")) {
-            selectedBalise = "image_marque";
-        }
+//        else if (qName.equals("image_marque")) {
+//            selectedBalise = "image_marque";
+//        }
     }
 
     public void endElement(String string, String string1, String qName) throws SAXException {
@@ -63,9 +63,9 @@ public class MarqueHandler extends DefaultHandler {
         } else if (qName.equals("ID_RESPONSABLE")) {
             selectedBalise = "";
         }
-        else if (qName.equals("image_marque")) {
-            selectedBalise = "";
-        }
+//        else if (qName.equals("image_marque")) {
+//            selectedBalise = "";
+//        }
         
     }
 
@@ -90,10 +90,10 @@ public class MarqueHandler extends DefaultHandler {
                
                 System.out.println(new String(chars, i, i1));
             }
-               if (selectedBalise.equals("image_marque")) {
-                seclectedMarque.setPhoto(new String(chars, i, i1));
-                System.out.println(new String(chars, i, i1));
-            }
+//               if (selectedBalise.equals("image_marque")) {
+//                seclectedMarque.setPhoto(new String(chars, i, i1));
+//                System.out.println(new String(chars, i, i1));
+//            }
         }
     }
 }

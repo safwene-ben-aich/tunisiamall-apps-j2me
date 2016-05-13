@@ -3,13 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/PI-DEV-FINAL/SPRINT%20MOBILE/TunisiaMallMOBILEfversion1/src/Handlers/ProduitHandlerSafwene.java</file>
-            <file>file:/D:/PI-DEV-FINAL/SPRINT%20MOBILE/TunisiaMallMOBILEfversion1/src/Entities/ProduitSafwene.java</file>
-            <file>file:/D:/PI-DEV-FINAL/SPRINT%20MOBILE/TunisiaMallMOBILEfversion1/src/DAO/ProduitDAO.java</file>
-            <file>file:/D:/PI-DEV-FINAL/SPRINT%20MOBILE/TunisiaMallMOBILEfversion1/src/GUI/ProduitListSafwene.java</file>
-            <file>file:/D:/PI-DEV-FINAL/SPRINT%20MOBILE/TunisiaMallMOBILEfversion1/src/GUI/ProduitFormSafwene.java</file>
-            <file>file:/D:/PI-DEV-FINAL/SPRINT%20MOBILE/TunisiaMallMOBILEfversion1/src/GUI/ListProduits.java</file>
-            <file>file:/D:/PI-DEV-FINAL/SPRINT%20MOBILE/TunisiaMallMOBILEfversion1/src/GUI/Midlet.java</file>
+            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/DAO/ThreadDAO.java</file>
+            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/DAO/ProduitDAO.java</file>
+            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/GUI/Authentification.java</file>
+            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/GUI/Midlet.java</file>
+            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/Handlers/ThreadHandler.java</file>
+            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/GUI/affichprod.java</file>
+            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/DAO/ClientDAO.java</file>
+            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/GUI/InscriptionClient.java</file>
+            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/GUI/ListMarques.java</file>
+            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/DAO/CommentaireDAO.java</file>
+            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/DAO/MarqueDAO.java</file>
+            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/DAO/CommentDAO.java</file>
         </group>
     </open-files>
 </project-private>
