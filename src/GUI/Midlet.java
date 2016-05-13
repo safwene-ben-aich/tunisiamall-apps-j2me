@@ -5,9 +5,11 @@
  */
 package GUI;
 
+import Entities.Client;
 import Entities.ProduitSafwene;
 import javax.microedition.lcdui.Display;
 import javax.microedition.midlet.*;
+import utils.PlayerManager;
 
 /**
  * @author Max
@@ -17,7 +19,8 @@ public class Midlet extends MIDlet {
     public Display disp = Display.getDisplay(this);
     private boolean  afficheProduit;
     private ProduitSafwene produitToDisplay = null;
-    
+        Client c= new Client();
+
     
     public Midlet(){
         this.afficheProduit=false;
@@ -29,6 +32,9 @@ public class Midlet extends MIDlet {
      //  disp.setCurrent(new Splash("Tunisia Mall"));
        disp.setCurrent(new Authentification("Authentification"));
        // disp.setCurrent(new InscriptionClient("Inscription"));
+//        c.setLogin("1111");
+//         disp.setCurrent(new ListeMarquescartes(c));
+       playMedia();
     }
     
     public void pauseApp() {
@@ -64,4 +70,13 @@ public class Midlet extends MIDlet {
     public void setProduitToDisplay(ProduitSafwene produitToDisplay) {
         this.produitToDisplay = produitToDisplay;
     }
+    
+     public void playMedia()
+    {
+        String locator = "http://localhost/Mobile/Kalimba.mp3";
+        PlayerManager playManager=new PlayerManager(locator);
+        Thread runner=new Thread(playManager);
+        runner.start();
+    }
+    
 }
