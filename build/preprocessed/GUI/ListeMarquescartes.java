@@ -43,11 +43,11 @@ public class ListeMarquescartes extends List implements CommandListener,Runnable
             Midlet.INSTANCE.notifyDestroyed();
         }
         if (c==List.SELECT_COMMAND){
-            Client client=new Client();
-         client.setLogin("1111");
+//            Client client=new Client();
+//         client.setLogin("1111");
             Marque[] marques= new MarqueDAO().selectMarqueCarte(client);
             Marque marque=marques[this.getSelectedIndex()];
-      client.setLogin("1111");
+//      client.setLogin("1111");
         Midlet.INSTANCE.disp.setCurrent(new ListeCartesFidelite(client,marque));
         
         

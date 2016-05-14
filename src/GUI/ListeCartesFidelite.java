@@ -26,7 +26,7 @@ public class ListeCartesFidelite extends List implements CommandListener,Runnabl
 Client client;
 Marque marque;
     public ListeCartesFidelite(Client client, Marque marque) {
-        super("Liste Marques", List.IMPLICIT);
+        super("Detail carte", List.IMPLICIT);
        this.client=client;
        this.marque=marque;
         addCommand(cmdExit);

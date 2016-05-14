@@ -1,5 +1,9 @@
 MIDlet-1: Midlet, ,GUI.Midlet
+<<<<<<< HEAD
 MIDlet-Jar-Size: 1927078
+=======
+MIDlet-Jar-Size: 1928285
+>>>>>>> d6df5391bcfc3f7ed119040d7f61c650e5d2656b
 MIDlet-Jar-URL: TunisiaMallMOBILEfversion1.jar
 MIDlet-Name: TunisiaMallMOBILEfversion1
 MIDlet-Vendor: Vendor
