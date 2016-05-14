@@ -18,9 +18,21 @@ public class Midlet extends MIDlet {
 
     public Display disp = Display.getDisplay(this);
     private boolean  afficheProduit;
+    private int idMarqueResponsable = 0;
     private ProduitSafwene produitToDisplay = null;
+   // private ResponsableToDisplay = null;
         Client c= new Client();
 
+        
+        
+   public void setIdMarqueResponsable(int idMarqueResponsable){
+       this.idMarqueResponsable = idMarqueResponsable;
+   }     
+   
+   public int getIdMarqueResponsable(){
+       return this.idMarqueResponsable;
+   }
+        
     
     public Midlet(){
         this.afficheProduit=false;

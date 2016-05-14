@@ -127,6 +127,16 @@ public class Authentification extends Form implements CommandListener,Runnable{
             }
             if (!sb.toString().equals("false")){
                      if (sb.toString().equals("RESPONSABLE")){
+                          //Récupération marque
+                          this.hc=(HttpConnection)Connector.open("http://localhost/scripts_php/utils_responsable.php?username="+this.textFieldUsername.getString());
+                          this.dis=this.hc.openDataInputStream();
+                          this.sb =new StringBuffer();
+                          while( (ascii=this.dis.read()) != -1 ){
+                                this.sb.append((char)ascii);
+                                            }
+                          Midlet.INSTANCE.setIdMarqueResponsable(Integer.parseInt(this.sb.toString()));
+          
+            
                             Midlet.INSTANCE.disp.setCurrent(new ChoixFormSafwene());
                         }
                      else if (sb.toString().equals("CLIENT")){

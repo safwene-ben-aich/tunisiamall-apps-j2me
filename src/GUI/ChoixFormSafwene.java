@@ -18,7 +18,7 @@ public class ChoixFormSafwene extends Form implements CommandListener{
     private StringItem stringItem;
     
     
-    
+
     
     public ChoixFormSafwene(){
         super("Choix d'opération");
@@ -45,6 +45,7 @@ public class ChoixFormSafwene extends Form implements CommandListener{
         this.append(this.stringItem);
         
         this.setCommandListener(this);
+
     }
     
     

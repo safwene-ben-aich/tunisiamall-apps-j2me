@@ -66,10 +66,6 @@ public class ProduitFormSafwene  extends Form implements CommandListener,Runnabl
         
         this.commandBack = new Command("Back", Command.SCREEN, 0);
        
-        
-      
-        
-        
         this.references = new TextField("References : ", null, 50, TextField.ANY);
         this.nom = new TextField("Nom : ", null, 50, TextField.ANY);
         
@@ -80,10 +76,7 @@ public class ProduitFormSafwene  extends Form implements CommandListener,Runnabl
         this.quantite = new TextField("Quantité : ", null, 50, TextField.ANY);
         this.Description = new TextField("Description", null, 50, TextField.ANY);
     
-        this.idMarque = 10;
-        
-        
-        
+        this.idMarque = Midlet.INSTANCE.getIdMarqueResponsable();
         
         this.append(this.references);
         this.append(this.nom);
