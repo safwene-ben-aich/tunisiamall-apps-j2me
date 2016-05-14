@@ -75,7 +75,7 @@ public class ProduitListSafwene extends Form implements CommandListener, Runnabl
                     Midlet.INSTANCE.setProduitToDisplay(produit);
                     Midlet.INSTANCE.setAfficheProduit(true);
           
-        Midlet.INSTANCE.disp.setCurrent(new ProduitFormSafwene());
+        Midlet.INSTANCE.disp.setCurrent(new ProduitFormSafwene("Gerer un produit"));
                     
         }
         

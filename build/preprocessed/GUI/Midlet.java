@@ -29,8 +29,8 @@ public class Midlet extends MIDlet {
     public static Midlet INSTANCE=null;
     public void startApp() {
         INSTANCE = this;
-       disp.setCurrent(new Splash("Tunisia Mall"));
-       //disp.setCurrent(new Authentification("Authentification"));
+     //  disp.setCurrent(new Splash("Tunisia Mall"));
+       disp.setCurrent(new Authentification("Authentification"));
        // disp.setCurrent(new InscriptionClient("Inscription"));
 //        c.setLogin("1111");
 //         disp.setCurrent(new ListeMarquescartes(c));

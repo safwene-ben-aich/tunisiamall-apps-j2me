@@ -41,7 +41,9 @@ public class ProduitFormSafwene  extends Form implements CommandListener,Runnabl
     private HttpConnection hc;
     private DataInputStream dis;
     private StringBuffer sb ;
-    private String url="http://localhost/scripts_php/GestionProduits.php?"; 
+    private String url="http://localhost/scripts_php/GestionProduits.php?";
+    
+    private MailResponsableEnseigne mailResponsableEnseigne;
 
     private String operation="";
     
@@ -51,8 +53,8 @@ public class ProduitFormSafwene  extends Form implements CommandListener,Runnabl
     
     
     
-    public ProduitFormSafwene(){
-        super ("Ajouter un produit");
+    public ProduitFormSafwene(String formName){
+        super (formName);
         this.prepareForm();
         
         
@@ -78,7 +80,7 @@ public class ProduitFormSafwene  extends Form implements CommandListener,Runnabl
         this.quantite = new TextField("Quantité : ", null, 50, TextField.ANY);
         this.Description = new TextField("Description", null, 50, TextField.ANY);
     
-        this.idMarque = 1;
+        this.idMarque = 10;
         
         
         
@@ -120,6 +122,7 @@ public class ProduitFormSafwene  extends Form implements CommandListener,Runnabl
          
           
         this.setCommandListener(this);
+        this.mailResponsableEnseigne = new MailResponsableEnseigne();
         
     
     }
@@ -224,6 +227,9 @@ public class ProduitFormSafwene  extends Form implements CommandListener,Runnabl
                                 + "&nom="+this.nom.getString()+"&type="+this.type.getString()+"&prix="+this.prix.getString()
                                 +"&tauxReduction="+this.tauxReduction.getString()+"&nombrePoint="+this.nombrePoint.getString()+"&quantite="+this.quantite.getString()+"&description="+this.Description.getString()+"&idMarque="+this.idMarque+"&operation=ajout");
                      
+                        System.out.println(this.url+"reference="+this.references.getString()+""
+                                + "&nom="+this.nom.getString()+"&type="+this.type.getString()+"&prix="+this.prix.getString()
+                                +"&tauxReduction="+this.tauxReduction.getString()+"&nombrePoint="+this.nombrePoint.getString()+"&quantite="+this.quantite.getString()+"&description="+this.Description.getString()+"&idMarque="+this.idMarque+"&operation=ajout");
                     this.dis=this.hc.openDataInputStream();
                     int ascii;
                     this.sb =new StringBuffer();   
@@ -241,6 +247,18 @@ public class ProduitFormSafwene  extends Form implements CommandListener,Runnabl
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
+    
+                            //Partie envoie de mail
+    
+                       if (this.mailResponsableEnseigne.SendMail("safwene.benaich@esprit.tn", "Gestion+Produit","Vous+avez+ajouté+un+nouveau+produit+de+reference+"+this.references.getString(),"From:+tunisiamalllabess@gmail.com")){
+                           System.out.println("Mail envoyé");
+                       }
+                       else 
+                       {
+                           System.out.println("Mail non envoyé");
+                       }
+    
+    
             
         }
         else if (this.operation == "modifier"){
@@ -272,6 +290,15 @@ public class ProduitFormSafwene  extends Form implements CommandListener,Runnabl
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
+                 //Partie envoie de mail
+    
+                       if (this.mailResponsableEnseigne.SendMail("safwene.benaich@esprit.tn", "Gestion+Produit","Vous+avez+modifié+un+produit+de+reference+"+this.references.getString(),"From:+tunisiamalllabess@gmail.com")){
+                           System.out.println("Mail envoyé");
+                       }
+                       else 
+                       {
+                           System.out.println("Mail non envoyé");
+                       }
             
         }
         
@@ -300,7 +327,15 @@ public class ProduitFormSafwene  extends Form implements CommandListener,Runnabl
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
-            
+               //Partie envoie de mail
+    
+                       if (this.mailResponsableEnseigne.SendMail("safwene.benaich@esprit.tn", "Gestion+Produit","Vous+avez+supprimé+un+produit+de+reference+"+this.references.getString(),"From:+tunisiamalllabess@gmail.com")){
+                           System.out.println("Mail envoyé");
+                       }
+                       else 
+                       {
+                           System.out.println("Mail non envoyé");
+                       }
         }
         
     }

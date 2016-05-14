@@ -56,7 +56,7 @@ public class ChoixFormSafwene extends Form implements CommandListener{
         }
         
         else if (command == this.commandAjouterProduit){
-            Midlet.INSTANCE.disp.setCurrent(new ProduitFormSafwene());
+            Midlet.INSTANCE.disp.setCurrent(new ProduitFormSafwene("Ajouter un produit"));
         }
         
         else if (command == this.commandGererProduit){
