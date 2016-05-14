@@ -2,19 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/DAO/ThreadDAO.java</file>
-            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/DAO/ProduitDAO.java</file>
-            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/GUI/Authentification.java</file>
-            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/GUI/Midlet.java</file>
-            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/Handlers/ThreadHandler.java</file>
-            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/GUI/affichprod.java</file>
-            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/DAO/ClientDAO.java</file>
-            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/GUI/InscriptionClient.java</file>
-            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/GUI/ListMarques.java</file>
-            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/DAO/CommentaireDAO.java</file>
-            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/DAO/MarqueDAO.java</file>
-            <file>file:/C:/TunisiamallMobile/PI-DEV-TUNISIAMALL3A6-MOBILE/src/DAO/CommentDAO.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
