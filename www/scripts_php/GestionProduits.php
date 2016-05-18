@@ -55,6 +55,15 @@ class GestionProduits {
 	}
 	
 	
+	public function getCountMarque ($idMarque){
+		$statement = $this->connexion->prepare("SELECT COUNT(*) FROM PRODUIT WHERE ID_MARQUE=:ID_MARQUE");
+		$statement->bindValue(':ID_MARQUE',$idMarque,PDO::PARAM_STR);
+	    	return ($statement->execute());
+	
+		
+	}
+	
+	
 	public function modifierProduit($produit){
 		$statement = $this->connexion->prepare("UPDATE PRODUIT SET ID_MARQUE=:ID_MARQUE, NOM=:NOM, TYPE=:TYPE, PRIX=:PRIX, TAUX_REDUCTION=:TAUX_REDUCTION, NOMBRE_POINT=:NOMBRE_POINT, PHOTO=:PHOTO, DESCRIPTION=:DESCRIPTION, QUANTITE=:QUANTITE WHERE REFERENCE=:REFERENCE");
 		
