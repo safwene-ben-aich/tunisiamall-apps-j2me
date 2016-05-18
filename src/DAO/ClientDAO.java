@@ -52,13 +52,13 @@ public class ClientDAO {
             // get a parser object
             SAXParser SAXparser = SAXParserFactory.newInstance().newSAXParser();
             // get an InputStream from somewhere (could be HttpConnection, for example)
-            HttpConnection hc = (HttpConnection) Connector.open("http://localhost/phpTunisiaMall/selectclient.php?login="+client.getLogin());//people.xml est un exemple
-           System.out.println("http://localhost/phpTunisiaMall/selectclient.php?login="+client.getLogin());
+            HttpConnection hc = (HttpConnection) Connector.open("http://localhost/scripts_php/phpTunisiaMall/selectclient.php?login="+client.getLogin());//people.xml est un exemple
+           System.out.println("http://localhost/scripts_php/phpTunisiaMall/selectclient.php?login="+client.getLogin());
             DataInputStream dis = new DataInputStream(hc.openDataInputStream());
             SAXparser.parse(dis, clientHandler);
             // display the result
             Clients= clientHandler.getClient();
-       
+            System.out.println("L'ID du CLIENT = "+this.Clients[0].getId());
              return Clients;
         } catch (ParserConfigurationException ex) {
             ex.printStackTrace();

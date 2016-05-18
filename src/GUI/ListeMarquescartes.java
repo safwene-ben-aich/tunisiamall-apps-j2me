@@ -22,7 +22,7 @@ import javax.microedition.lcdui.List;
  */
 public class ListeMarquescartes extends List implements CommandListener,Runnable{
 
-    Command cmdExit = new Command("Exit", Command.EXIT, 0);
+    Command cmdExit = new Command("Back", Command.EXIT, 0);
  Client client ;
  
     public ListeMarquescartes(Client client) {
@@ -40,7 +40,7 @@ public class ListeMarquescartes extends List implements CommandListener,Runnable
   
     public void commandAction(Command c, Displayable d) {
         if (c == cmdExit) {
-            Midlet.INSTANCE.notifyDestroyed();
+            Midlet.INSTANCE.disp.setCurrent(new ChoixClientCanvas(client));
         }
         if (c==List.SELECT_COMMAND){
 //            Client client=new Client();
@@ -55,7 +55,7 @@ public class ListeMarquescartes extends List implements CommandListener,Runnable
     }
 
     public void run() {
-        client.setLogin("1111");
+       // client.setLogin("1111");
         Marque[] marques = new MarqueDAO().selectMarqueCarte(client);
         if (marques.length > 0) {
             for (int i = 0; i < marques.length; i++) {

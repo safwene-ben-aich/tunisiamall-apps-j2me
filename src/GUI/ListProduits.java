@@ -63,7 +63,7 @@ int idmarque;
     Client[] cli= new ClientDAO().select(client);
       
     System.out.println("theeeee cliennnnnnt"+cli[0]);
-    Midlet.INSTANCE.disp.setCurrent(new listReservations(cli[0],idmarque));
+       Midlet.INSTANCE.disp.setCurrent( new listReservations(cli[0]));
     
     }
         if (c==cmdmail){

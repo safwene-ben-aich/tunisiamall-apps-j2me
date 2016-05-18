@@ -49,7 +49,7 @@ public class Mail extends Form implements CommandListener, Runnable {
     TextField tftxt = new TextField("Message : ", "", 20, TextField.ANY);
 
     Command Envoyer= new Command("Envoyer", Command.SCREEN, 0);
-    Command back= new Command("Retour", Command.SCREEN, 1);
+    Command back= new Command("Back", Command.SCREEN, 1);
 
    
 
@@ -93,8 +93,7 @@ hm = (HttpConnection) Connector.openInputStream(url2);
     }
          
         if(c==back){
-           
-      //  Midlet.mid.dis.setCurrent(new Authentification("Authentification",this.disp));
+                    Midlet.INSTANCE.disp.setCurrent(new ChoixClientCanvas(client));
   
                 }
     }

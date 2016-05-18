@@ -25,7 +25,7 @@ import javax.microedition.lcdui.List;
 public class ListMarques extends List implements CommandListener,Runnable{
 
     Client client;
-    Command cmdExit = new Command("Exit", Command.EXIT, 0);
+    Command cmdExit = new Command("Back", Command.EXIT, 0);
         StringBuffer sb;
     public ListMarques(Client client) {
         super("Liste Marques", List.IMPLICIT);
@@ -34,7 +34,6 @@ public class ListMarques extends List implements CommandListener,Runnable{
         setCommandListener(this);
         Thread th = new Thread(this);
         th.start();
-        
     }
 
    
@@ -42,12 +41,13 @@ public class ListMarques extends List implements CommandListener,Runnable{
   
     public void commandAction(Command c, Displayable d) {
         if (c == cmdExit) {
-            Midlet.INSTANCE.notifyDestroyed();
+            Midlet.INSTANCE.disp.setCurrent(new ChoixClientCanvas(client));
         }
           if (c == List.SELECT_COMMAND) {
         Marque[] marques = new MarqueDAO().select();
             Marque marque=marques[this.getSelectedIndex()];
             Midlet.INSTANCE.disp.setCurrent(new ListProduits(client,marque.getId()));
+            
 
         }
        //Midlet.INSTANCE.disp.setCurrent(alertsuccess, new ListProduits(client));

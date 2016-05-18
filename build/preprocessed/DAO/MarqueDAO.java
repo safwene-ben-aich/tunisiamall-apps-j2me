@@ -35,7 +35,7 @@ public class MarqueDAO {
             // get a parser object
             SAXParser SAXparser = SAXParserFactory.newInstance().newSAXParser();
             // get an InputStream from somewhere (could be HttpConnection, for example)
-            HttpConnection hc = (HttpConnection) Connector.open("http://localhost/phpTunisiaMall/select.php");//people.xml est un exemple
+            HttpConnection hc = (HttpConnection) Connector.open("http://localhost/scripts_php/phpTunisiaMall/select.php");//people.xml est un exemple
             DataInputStream dis = new DataInputStream(hc.openDataInputStream());
             SAXparser.parse(dis, marqueHandler);
             // display the result
@@ -58,7 +58,8 @@ public class MarqueDAO {
             // get a parser object
             SAXParser SAXparser = SAXParserFactory.newInstance().newSAXParser();
             // get an InputStream from somewhere (could be HttpConnection, for example)
-            HttpConnection hc = (HttpConnection) Connector.open("http://localhost/pidev/selectmarquecarte.php?login="+client.getLogin());//people.xml est un exemple
+            HttpConnection hc = (HttpConnection) Connector.open("http://localhost/scripts_php/pidev/selectmarquecarte.php?login="+client.getLogin());//people.xml est un exemple
+            System.out.println("http://localhost/scripts_php/pidev/selectmarquecarte.php?login="+client.getLogin());
             DataInputStream dis = new DataInputStream(hc.openDataInputStream());
             SAXparser.parse(dis, marqueHandler);
             // display the result

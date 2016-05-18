@@ -1,7 +1,5 @@
 package GUI;
 
-
-
 import Entities.Client;
 import javax.microedition.lcdui.Canvas;
 import javax.microedition.lcdui.Command;
@@ -27,11 +25,11 @@ int idmarque;
 	
 	GoogleStaticMap map = null;
 	
-	public GoogleMapsPathCanvas(MIDlet m, Displayable testListScreen,Client client, int idmarque)
+	public GoogleMapsPathCanvas(MIDlet m, Displayable testListScreen,Client client)
 	{
             
 		super(m, testListScreen);
-                this.idmarque=idmarque;
+//                this.idmarque=idmarque;
 		this.client=client;
 		gMaps = new GoogleMaps();
 		
@@ -80,7 +78,7 @@ int idmarque;
                  public void commandAction(Command c, Displayable d) {
         
         if (c==back){
-        Midlet.INSTANCE.disp.setCurrent(new ListProduits(client,idmarque));
+        Midlet.INSTANCE.disp.setCurrent(new ChoixClientCanvas(client));
         
         }
     }

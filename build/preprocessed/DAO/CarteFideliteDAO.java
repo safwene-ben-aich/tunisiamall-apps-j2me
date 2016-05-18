@@ -31,7 +31,8 @@ public class CarteFideliteDAO {
             // get a parser object
             SAXParser SAXparser = SAXParserFactory.newInstance().newSAXParser();
             // get an InputStream from somewhere (could be HttpConnection, for example)
-            HttpConnection hc = (HttpConnection) Connector.open("http://localhost/pidev/selectcarte.php?login="+client.getLogin()+"&marque="+marque.getId());//people.xml est un exemple
+            HttpConnection hc = (HttpConnection) Connector.open("http://localhost/scripts_php/pidev/selectcarte.php?login="+client.getLogin()+"&marque="+marque.getId());//people.xml est un exemple
+           
             DataInputStream dis = new DataInputStream(hc.openDataInputStream());
             SAXparser.parse(dis, CarteFideliteHandler);
             // display the result

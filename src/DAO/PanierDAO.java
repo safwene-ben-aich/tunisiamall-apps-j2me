@@ -58,8 +58,8 @@ public class PanierDAO {
             // get a parser object
             SAXParser SAXparser = SAXParserFactory.newInstance().newSAXParser();
             // get an InputStream from somewhere (could be HttpConnection, for example)
-            HttpConnection hc = (HttpConnection) Connector.open("http://localhost/phpTunisiaMall/selectproduitpanier.php?idc="+client.getId());//people.xml est un exemple
-            System.out.println("http://localhost/phpTunisiaMall/selectproduitpanier.php?idc="+client.getId());
+            HttpConnection hc = (HttpConnection) Connector.open("http://localhost/scripts_php/phpTunisiaMall/selectproduitpanier.php?idc="+client.getId());//people.xml est un exemple
+            System.out.println("http://localhost/phpTunisiaMall/scripts_php/selectproduitpanier.php?idc="+client.getId());
             DataInputStream dis = new DataInputStream(hc.openDataInputStream());
             SAXparser.parse(dis, produitHandler);
             // display the result

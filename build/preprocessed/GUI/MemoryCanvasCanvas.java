@@ -98,7 +98,7 @@ public class MemoryCanvasCanvas extends Canvas {
         
         switch (keyPressed){
             case GAME_A : 
-                Midlet.INSTANCE.disp.setCurrent(new ChoixFormSafwene());
+                Midlet.INSTANCE.disp.setCurrent(new ChoixResponsableCanvas());
                 break;
             
             

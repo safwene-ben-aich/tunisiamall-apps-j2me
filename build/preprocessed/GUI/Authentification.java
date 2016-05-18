@@ -103,8 +103,11 @@ public class Authentification extends Form implements CommandListener,Runnable{
                       }
                 }
                 else if (command == this.commandInscription){
-                      Midlet.INSTANCE.disp.setCurrent(new InscriptionClient("Inscription Client"));
-                 
+                     Midlet.INSTANCE.disp.setCurrent(new InscriptionClient("Inscription Client"));
+                            
+           
+                    
+                    
                 }
     
     
@@ -135,15 +138,13 @@ public class Authentification extends Form implements CommandListener,Runnable{
                                 this.sb.append((char)ascii);
                                             }
                           Midlet.INSTANCE.setIdMarqueResponsable(Integer.parseInt(this.sb.toString()));
-          
-            
-                            Midlet.INSTANCE.disp.setCurrent(new ChoixFormSafwene());
+                          Midlet.INSTANCE.disp.setCurrent(new ChoixResponsableCanvas());
                         }
                      else if (sb.toString().equals("CLIENT")){
                      
                         Client client= new Client();
                     client.setLogin(textFieldUsername.getString());
-                    Midlet.INSTANCE.disp.setCurrent( new ListMarques(client));
+                        Midlet.INSTANCE.disp.setCurrent(new ChoixClientCanvas(client));
                      }
                      
                      

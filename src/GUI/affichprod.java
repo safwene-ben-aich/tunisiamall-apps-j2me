@@ -237,7 +237,7 @@ append(buttoncom);
     public void commandAction(Command c, Displayable d) {
         Midlet.INSTANCE.disp.setCurrent(new ListProduits(client,idmarque));
         if (c==cmdggmap){
-        Midlet.INSTANCE.disp.setCurrent(new GoogleMapsPathCanvas(Midlet.INSTANCE, d, client,idmarque));
+        Midlet.INSTANCE.disp.setCurrent(new GoogleMapsPathCanvas(Midlet.INSTANCE, d, client));
         
         }
     }

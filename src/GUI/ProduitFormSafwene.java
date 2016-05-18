@@ -161,7 +161,7 @@ public class ProduitFormSafwene  extends Form implements CommandListener,Runnabl
     public void commandAction (Command command, Displayable displayable){
         
         if (command == this.commandBack ){
-            Midlet.INSTANCE.disp.setCurrent(new ChoixFormSafwene());
+            Midlet.INSTANCE.disp.setCurrent(new ChoixResponsableCanvas());
         }
         else if (command == this.commandAjouter){
             if (!this.verifForm()){
